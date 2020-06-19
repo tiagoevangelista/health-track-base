@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="description" content="Página da Aplicação Web Health Track">
+   <meta name="author" content="Tiago Evangelista">
+   
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/login-page.css">
+   <title>HealthTrack</title>
+</head>
+<body class="login-page">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 mx-auto">
+            <a href="#" class="d-flex justify-content-center">
+               <img src="img/logo.svg" alt="HealthTrack">
+            </a>
+               <form class="form-login-page" action="home.html" method="get">
+                  <div class="form-group ht-form">
+                     <label for="email">E-mail</label>
+                     <input type="text" id="email" class="form-control p-4 mb-4 sombreado" placeholder="ex.: john@doe.com">
+                  </div>
+                  <div class="form-group ht-form">
+                     <label for="senha"  class="d-flex justify-content-between">Senha
+                        <a href="#">Esqueceu a senha?</a>
+                     </label>
+                     <input type="password" id="senha" class="form-control p-4 mb-4 sombreado" placeholder="digite sua senha">
+                  </div>
+                  <button type="submit" class="btn btn-primary mx-auto mb-4 w-100">Logar</button>
+               </form>
+      
+               <a href="#" class="cadastro-call">Não tem cadastro? <u>Clique aqui</u></a>
+      
+               <a href="#" class="btn btn-clean w-100 text-center"><img src="img/google.svg" alt="Google"> <span>Entre com o Google</span></a>
+               <a href="#" class="btn btn-clean w-100 text-center"><img src="img/facebook.svg" alt="Facebook"> Entre com o Facebook</a>
+         </div>
+      </div>
+   </div>
+   
+   <script src="js/jquery-3.5.1.min.js"></script>
+   <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

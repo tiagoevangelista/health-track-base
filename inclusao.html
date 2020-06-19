@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="description" content="Página da Aplicação Web Health Track">
+   <meta name="author" content="Tiago Evangelista">
+   
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>HealthTrack: Inclusão de dados</title>
+</head>
+<body>
+   
+   <header class="bg-white sombreado topo">
+      <div class="container">
+         <div class="d-flex flex-row justify-content-between py-3">
+            <a href="./home.html">
+               <img src="img/logo.svg" alt="HealthTrack">
+            </a>
+            <div class="menu-topo">
+               <img src="img/menu-hamburger.svg" alt="Menu de navegação" class="abrir" role="button">
+               <img src="img/menu-fechar.svg" alt="Menu de navegação" class="fechar" role="button">
+            </div>
+         </div>
+         <nav class="bg-white menu-nav">
+            <ul class="px-0">
+               <li class="p-3 d-flex align-items-center justify-content-between">
+                  <a href="./atualizacao.html" class="d-flex align-items-center justify-content-between w-100">
+                     <span>Aletrar perfil</span>
+                     <img src="img/config.svg" alt="Alterar perfil">
+                  </a>
+               </li>
+               <li class="mb-4">
+                  <h2 class="bg-light py-2 px-3 mb-2">Fazer inclusão</h2>
+                  <ul class="px-3">
+                     <li><a href="./inclusao.html">Peso</a></li>
+                     <li><a href="./inclusao.html">Atividade física</a></li>
+                     <li><a href="./inclusao.html">Alimento ingerido</a></li>
+                  </ul>
+               </li>
+               <li class="mb-4">
+                  <h2 class="bg-light py-2 px-3 mb-2">Histórico detalhado</h2>
+                  <ul class="px-3">
+                     <li><a href="./historico.html">Resumo geral</a></li>
+                     <li><a href="./historico.html">Peso</a></li>
+                     <li><a href="./historico.html">Alimento & Calorias</a></li>
+                     <li><a href="./historico.html">Atividades físicas</a></li>
+                  </ul>
+               </li>
+               <li class="mb-4">
+                  <h2 class="bg-light py-2 px-3 mb-2"><img src="img/star.svg" class="mr-2 align-text-top" alt="Área premium"> Área premium</h2>
+                  <ul class="px-3">
+                     <li><a href="#">Conversar com especialista</a></li>
+                     <li><a href="#">Histórico de conversas</a></li>
+                  </ul>
+               </li>
+               <li class="pt-3 border-top pr-3 text-right btn-sair">
+                  <a href="./index.html">
+                     <span class="mr-2 text-danger">Encerrar sessão</span>
+                     <button class="btn btn-danger full-rounded-ico"><img src="img/power.svg" alt="Encerrar sessão"></button>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+   
+   <div class="position-relative d-flex align-items-center justify-content-center usr-foto-area">
+      <span class="position-relative text-center font-weight-bold font-italic usr-nome">Olá, John Doe</span>
+      <img src="img/foto-perfil.jpg" alt="John Doe" class="w-100 h-100 position-absolute">
+   </div>
+   
+   <div class="mb-4 sombreado bg-white status-dia">
+      <div class="container">
+         <div class="d-flex flex-row justify-content-between bg-white p-3 status-itens">
+            <div class="d-flex align-items-center">
+               <img src="img/imc-metric.svg" alt="IMC" class="mr-2">
+               <div>
+                  <p>22.1</p>
+                  <span>IMC</span>
+               </div>
+            </div>
+            <div class="d-flex align-items-center">
+               <img src="img/calorias.svg" alt="Calorias" class="mr-2">
+               <div>
+                  <p>1024</p>
+                  <span>kcal</span>
+               </div>
+            </div>
+            <div class="d-flex align-items-center">
+               <img src="img/balanca.svg" alt="Calorias" class="mr-2">
+               <div>
+                  <p>76</p>
+                  <span>kg</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="text-center p-1 status-info">
+         <span>dados de hoje</span>
+      </div>
+   </div>
+   
+   <main class="container">
+      <div class="row">
+         <div class="col-md-6 mx-auto">
+            <div class=" box-conteudo">
+               <h2 class="text-center p-3">Inclusão de novo peso</h2>
+               
+               <form class="form-login-page ht-form mt-0" action="#" method="get">
+                  <div class="form-group form-insert">
+                     <label for="peso"></label>
+                     <input type="number" id="peso" step="0.1" class="form-control p-2 px-5 text-left mb-3 sombreado" value="78.0">
+                  </div>
+                  <button type="submit" class="w-100 btn btn-primary mx-auto mb-5" data-toggle="modal" data-target="#pesoIncluido">Incluir</button>
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6 mx-auto">
+            <div class="bg-white rounded-lg px-2 sombreado pb-1 mb-3 box-conteudo">
+               <h2 class="text-center p-3">Histórico recente</h2>
+               
+               <table class="table table-borderless tabela-historico">
+                  <thead class="bg-light">
+                     <tr>
+                        <th scope="col">Mês anterior</th>
+                        <th scope="col">Última atualização</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="anterior">
+                           <span class="font-weight-bold text-uppercase">Peso</span>
+                           <p><strong>68.6</strong>KG</p>
+                        </td>
+                        <td class="ultima">
+                           <span class="font-weight-bold text-uppercase">Peso</span>
+                           <p><strong>70</strong>KG</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="anterior">
+                           <span class="font-weight-bold text-uppercase">IMC</span>
+                           <p><strong>21.9</strong></p>
+                        </td>
+                        <td class="ultima">
+                           <span class="font-weight-bold text-uppercase">IMC</span>
+                           <p><strong>22.1</strong></p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="anterior">
+                           <span class="font-weight-bold text-uppercase">Dia de exercícios</span>
+                           <p><strong>8</strong> dias</p>
+                        </td>
+                        <td class="ultima">
+                           <span class="font-weight-bold text-uppercase">Dia de exercícios</span>
+                           <p><strong>3</strong> dias</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <a href="./historico.html" class="w-100 btn btn-primary mt-n3 mx-auto btn-bottom" role="button">Carregar mais antigos</a>
+            </div>
+            <div class=" box-conteudo">
+               <h2 class="text-center p-3 mt-5 mb-4">Outras inclusões</h2>
+               <a href="./inclusao.html" class="w-100 btn btn-primary mx-auto mb-3" role="button">Incluir atividade física</a>
+               <a href="./inclusao.html" class="w-100 btn btn-primary mx-auto mb-4" role="button">Incluir alimento & calorias</a>
+            </div>
+         </div>
+      </div>
+      
+   </main>
+   
+   
+   <div class="modal fade ht-modal text-center" id="pesoIncluido" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <h2 class="mb-5">Peso incluído</h2>
+               <p>Você também pode: </p>
+               <a href="./historico.html" class="w-100 btn btn-primary mt-3 mx-auto" role="button">Ver histórico</a>
+               <a href="./home.html" class="w-100 btn btn-primary mt-3 mx-auto" role="button">Ir para Home</a>
+               
+               <a href="./inclusao.html" class="w-100 btn btn-primary mt-5 mx-auto" role="button">Incluir atividade física</a>
+               <a href="./inclusao.html" class="w-100 btn btn-primary mt-3 mx-auto" role="button">Carregar alimento & caloria</a>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Fechar</button>
+             </div>
+         </div>
+      </div>
+   </div>
+   <script src="js/jquery-3.5.1.min.js"></script>
+   <script src="js/index.js"></script>
+   <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
